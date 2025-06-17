@@ -3,10 +3,11 @@ import pygame
 pygame.init()   
 
 screen=pygame.display.set_mode((640,640))
+pygame.display.set_caption('Richards adventures 1')
 character_img=pygame.image.load('character.png').convert()
 running=True
 clock=pygame.time.Clock()
-sound=pygame.mixer.music.load("music1.wav")
+sound=pygame.mixer.music.load("donuts.wav")
 pygame.mixer.music.play(-1)
 delta=0.1
 speed =70
@@ -23,6 +24,8 @@ while running:
     screen.blit(character_img,(x,y))
     if move_keys_down>1:
         current_speed=speed/2
+    else:
+        current_speed=speed   
     if move_right:
         x+=current_speed*delta
     if move_down:
