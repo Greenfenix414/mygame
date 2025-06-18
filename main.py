@@ -10,7 +10,7 @@ clock=pygame.time.Clock()
 sound=pygame.mixer.music.load("donuts.wav")
 pygame.mixer.music.play(-1)
 delta=0.1
-speed =70
+speed =140
 current_speed =speed
 x=0
 y=0
