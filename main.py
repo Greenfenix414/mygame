@@ -25,12 +25,12 @@ class game:
     def run(self):
 
         while running:
-            screen.fill("white")
-            screen.blit(character_img,(x,y))
+            self.screen.fill("white")
+            self.screen.blit(self.character_img,(x,y))
             if move_keys_down>1:
-                current_speed=speed/2
+                current_speed=self.speed/2
             else:
-                current_speed=speed   
+                current_speed=self.speed   
             if move_right:
                 x+=current_speed*delta
             if move_down:
@@ -69,6 +69,6 @@ class game:
                         move_keys_down-=1
                         move_up=False                    
             pygame.display.flip()
-            delta = clock.tick(60)/1000
+            delta = self.clock.tick(60)/1000
             delta=max(0.001, min(0.1,delta))
         pygame.quit()
